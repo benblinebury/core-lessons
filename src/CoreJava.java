@@ -19,5 +19,7 @@ public class CoreJava {
         } else {
             System.out.println("Invalid command");
         }
+
+        System.out.println("Hi there!");
     }
 }
