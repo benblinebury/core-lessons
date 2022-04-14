@@ -21,4 +21,8 @@ public class LessonOneService {
     public String concatString(String firstInput, String secondInput) {
         return null;
     }
+
+    public String reverseStringToLowerCase(String firstInput, String secondInput) {
+        return null;
+    }
 }

@@ -63,4 +63,14 @@ class LessonOneServiceTest {
 
         assertEquals("My name is HAL", result, "Results do not match");
     }
+
+    @Test
+    void reverseStringTest() {
+        String firstInput = "My name is";
+        String secondInput = "HAL";
+
+        String result = lessonOneService.reverseStringToLowerCase(firstInput, secondInput);
+
+        assertEquals("lah si eman ym", result, "Results do not match");
+    }
 }
