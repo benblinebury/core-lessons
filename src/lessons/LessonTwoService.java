@@ -1,11 +1,7 @@
 package lessons;
 
-import java.util.*;
-
-import static java.util.Comparator.comparing;
-import static java.util.Comparator.comparingInt;
-import static java.util.stream.Collectors.collectingAndThen;
-import static java.util.stream.Collectors.toCollection;
+import java.util.List;
+import java.util.Set;
 
 public class LessonTwoService {
 
@@ -24,4 +20,6 @@ public class LessonTwoService {
     public Set<Book> createSet(List<Book> books) {
         return null;
     }
+
+    public Book[] createArray(Book bookOne, Book bookTwo, Book bookThree, Book bookFour) { return null; }
 }

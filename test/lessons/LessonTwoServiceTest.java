@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 import java.util.List;
 import java.util.Set;
 
+import static lessons.LessonTwoTestData.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class LessonTwoServiceTest {
@@ -31,6 +32,13 @@ class LessonTwoServiceTest {
     }
 
     @Test
+    void arrays() {
+        Book[] result = lessonTwoService.createArray(EVERYTHING_THAT_RISES, AWAKENING, UNBEARABLE, IDENTITY);
+
+        assertEquals(4, result.length, "Results do not match");
+    }
+
+    @Test
     void addBookToList() {
         Book newBook = new Book(16, "Fart With The Wind", "Butts", "978-0156030083");
 
@@ -47,7 +55,7 @@ class LessonTwoServiceTest {
 
         List<Book> result = lessonTwoService.findDuplicateISBN(books);
 
-        assertEquals(books.get(8), result.get(0), "Results do not match");
+        assertEquals(FLOWERS, result.get(0), "Results do not match");
         assertEquals(newBook, result.get(1), "Results do not match");
     }
 
