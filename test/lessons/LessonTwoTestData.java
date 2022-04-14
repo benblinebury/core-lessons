@@ -1,7 +1,6 @@
 package lessons;
 
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 class LessonTwoTestData {
     private static final Book EVERYTHING_THAT_RISES = new Book(1, "Everything That Rises Must Converge", "Flannery O'Connor", "978-0374504649");
@@ -24,5 +23,25 @@ class LessonTwoTestData {
 
     List<Book> getBooks() {
         return BOOKS;
+    }
+
+    List<Book> getBooksForSet() {
+        Book bookOne = new Book(1, "title one", "author one", "isbn one");
+        Book bookTwo = new Book(2, "title two", "author two", "isbn two");
+        Book bookThree = new Book(3, "title three", "author three", "isbn three");
+
+        List<Book> books = new ArrayList<>();
+        books.add(bookOne);
+        books.add(bookTwo);
+        books.add(bookThree);
+        books.add(bookThree);
+
+        return books;
+    }
+
+    Set<Book> getBookSet() {
+        List<Book> books = getBooksForSet();
+
+        return new HashSet<>(books);
     }
 }

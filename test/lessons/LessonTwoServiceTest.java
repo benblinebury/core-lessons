@@ -43,7 +43,7 @@ class LessonTwoServiceTest {
 
     @Test
     void findDuplicateISBN() {
-        List<Book> books = new ArrayList<>(testData.getBooks());
+        List<Book> books = testData.getBooks();
         Book newBook = new Book(16, "Fart With The Wind", "Butts", "978-0156030083");
         books.add(newBook);
 
@@ -55,18 +55,11 @@ class LessonTwoServiceTest {
 
     @Test
     void setIntro() {
-        Book bookOne = new Book(1, "title one", "author one", "isbn one");
-        Book bookTwo = new Book(2, "title two", "author two", "isbn two");
-        Book bookThree = new Book(3, "title three", "author three", "isbn three");
-
-        List<Book> books = new ArrayList<>();
-        books.add(bookOne);
-        books.add(bookTwo);
-        books.add(bookThree);
-        books.add(bookThree);
+        books = testData.getBooksForSet();
+        Set<Book> bookSet = testData.getBookSet();
 
         Set<Book> result = lessonTwoService.createSet(books);
 
-        assertEquals(books.size() - 1, result.size(), "Results do not match");
+        assertEquals(bookSet.size(), result.size(), "Results do not match");
     }
 }
